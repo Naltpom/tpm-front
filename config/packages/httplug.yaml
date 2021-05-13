@@ -1,0 +1,19 @@
+httplug:
+    plugins:
+        logger: ~
+        authentication:
+            auth_api:
+                type:    'service'
+                service: 'app.security.api'
+
+    clients:
+        default:
+            factory: 'httplug.factory.guzzle6'
+            plugins:
+                - 'httplug.plugin.authentication.auth_api'
+                - 'httplug.plugin.logger'
+
+        auth:
+            factory: 'httplug.factory.guzzle6'
+            plugins:
+                - 'httplug.plugin.logger'

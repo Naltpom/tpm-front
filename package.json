@@ -10,6 +10,7 @@
         "eslint-config-airbnb": "^18.2.0",
         "eslint-loader": "^4.0.2",
         "eslint-plugin-import": "^2.22.0",
+        "google-charts": "^2.0.0",
         "node-sass": "^4.14.1",
         "regenerator-runtime": "^0.13.2",
         "sass-loader": "^8.0.2",
@@ -27,11 +28,20 @@
     },
     "dependencies": {
         "@fortawesome/fontawesome-free": "^5.14.0",
+        "@ttskch/select2-bootstrap4-theme": "^1.4.0",
+        "air-datepicker": "^2.2.3",
+        "apexcharts": "^3.23.1",
         "bazinga-translator": "^4.0.0",
         "bootstrap": "^4.5.2",
+        "chart.js": "^2.9.4",
+        "chartjs-chart-timeline": "^0.4.0",
+        "devbridge-autocomplete": "^1.4.11",
         "intl-messageformat": "^9.4.6",
         "jquery": "^3.5.1",
+        "jquery-ui": "^1.12.1",
         "material-design-iconic-font": "^2.2.0",
-        "popper.js": "^1.16.1"
+        "popper.js": "^1.16.1",
+        "select2": "^4.0.13",
+        "zxcvbn": "^4.4.2"
     }
 }

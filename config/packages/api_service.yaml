@@ -1,0 +1,35 @@
+parameters:
+    swagger.schema.file.api: "file://%kernel.project_dir%/config/swagger/api.json"
+
+services:
+    ElevenLabs\Api\Factory\SchemaFactoryInterface: ~
+    ElevenLabs\Api\Service\ApiService: "@api_service.api.default"
+
+# API Services
+api_service:
+    pagination:
+        hal:
+            page: null
+            perPage: itemsPerPage
+            totalPages: null
+            totalItems: totalItems
+
+    apis:
+        auth:
+            schema: "%swagger.schema.file.api%"
+            client: httplug.client.auth
+            config:
+                baseUri: "%env(API_ENDPOINT)%"
+                validateRequest: true
+                validateResponse: true
+                returnResponse: false
+
+        default:
+            schema: "%swagger.schema.file.api%"
+            client: httplug.client.default
+            config:
+                baseUri: "%env(API_ENDPOINT)%"
+                validateRequest: true
+                validateResponse: false
+                returnResponse: false
+
