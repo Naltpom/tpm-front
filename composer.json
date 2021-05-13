@@ -1,4 +1,5 @@
 {
+    "name": "tpm/front",
     "description": "description",
     "type": "project",
     "license": "proprietary",
