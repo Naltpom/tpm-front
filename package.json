@@ -1,0 +1,37 @@
+{
+    "devDependencies": {
+        "@babel/core": "^7.12.10",
+        "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+        "@babel/preset-env": "^7.12.13",
+        "@symfony/webpack-encore": "^0.30.0",
+        "babel-loader": "^8.2.2",
+        "core-js": "^3.0.0",
+        "eslint": "^7.7.0",
+        "eslint-config-airbnb": "^18.2.0",
+        "eslint-loader": "^4.0.2",
+        "eslint-plugin-import": "^2.22.0",
+        "node-sass": "^4.14.1",
+        "regenerator-runtime": "^0.13.2",
+        "sass-loader": "^8.0.2",
+        "twig": "^1.15.4",
+        "twig-loader": "^0.5.5",
+        "webpack-notifier": "^1.6.0"
+    },
+    "license": "UNLICENSED",
+    "private": true,
+    "scripts": {
+        "dev-server": "encore dev-server",
+        "dev": "encore dev",
+        "watch": "encore dev --watch",
+        "build": "encore production --progress"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "^5.14.0",
+        "bazinga-translator": "^4.0.0",
+        "bootstrap": "^4.5.2",
+        "intl-messageformat": "^9.4.6",
+        "jquery": "^3.5.1",
+        "material-design-iconic-font": "^2.2.0",
+        "popper.js": "^1.16.1"
+    }
+}
