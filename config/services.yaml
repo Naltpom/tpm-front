@@ -8,8 +8,11 @@ parameters:
 services:
     # default configuration for services in *this* file
     _defaults:
-        autowire: true      # Automatically injects dependencies in your services.
-        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+        autowire: true
+        autoconfigure: true
+        bind:
+            $appVersion: '%env(APP_VERSION)%'
+            $rootPath : "%kernel.project_dir%"
 
     # makes classes in src/ available to be used as services
     # this creates a service per class whose id is the fully-qualified class name
@@ -27,5 +30,19 @@ services:
         resource: '../src/Controller/'
         tags: ['controller.service_arguments']
 
+    app.security.api:
+        class: App\Security\AppAuth
+
+    Twig\Extra\Intl\IntlExtension: ~
+    
+    Twig\Extra\CssInliner\CssInlinerExtension: ~
+
+    App\Client\ApiClient:
+        arguments:
+            $client: "@api_service.api.default"
+
+    App\Security\Provider\ApiProvider:
+        arguments:
+            $client: "@api_service.api.default"
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones

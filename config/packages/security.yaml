@@ -15,7 +15,7 @@ security:
         app_version:
             pattern: ^/state$
             security: false
-            
+
         login:
             pattern:  ^/login$
             security: false
@@ -29,7 +29,7 @@ security:
 
         main:
             pattern: ^/
-            security: true
+            security: false
             switch_user: true
             form_login:
                 login_path: /login
@@ -46,5 +46,5 @@ security:
                     - App\Security\Authenticator\ConfirmEmailAuthenticator
                     - App\Security\Authenticator\LoginFormAuthenticator
                 entry_point: App\Security\Authenticator\ConfirmEmailAuthenticator
-    access_control:
-        - { path: ^/, roles: ROLE_USER }
+    # access_control:
+    #     - { path: ^/, roles: ROLE_USER }
