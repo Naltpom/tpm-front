@@ -12,3 +12,29 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+
+/* VARIABLE */
+@import "variable";
+
+
+/* TEMPLATE */
+@import "./components/templates/outsider.scss";
+@import "./components/templates/dashboard.scss";
+
+
+/* ATOMS */
+@import "./components/atoms/footer";
+
+
+/* MOLECULES */
+// @import "./components/molecules/table";
+
+
+/* ORGANISMS */
+@import "components/organisms/aside";
+@import "components/organisms/header";
+
+
+/* PAGES */
+@import "components/pages/dashboard";

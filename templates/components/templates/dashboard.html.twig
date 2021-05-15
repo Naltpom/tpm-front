@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="dashboard-template">
+        {% include "components/organisms/_aside.html.twig" %}
+        {% include "components/organisms/_header.html.twig" %}
+
+        <main>
+            <div class="content">
+            {# ########################################## #}
+            {#       block principale de contenu          #}
+            {# ########################################## #}
+            {% block content %}{% endblock %}
+            </div>
+        </main>
+        
+
+        <footer>{% include "components/atoms/_footer.html.twig" %}</footer>
+    </div>
+{% endblock %}

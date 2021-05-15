@@ -11,6 +11,10 @@ Encore
         from: './assets/files',
         to: 'files/[path][name].[ext]',
     })
+    .copyFiles({
+        from: './assets/images',
+        to: 'images/[path][name].[ext]',
+    })
     .addEntry('js/app', './assets/js/app.js')
     .addStyleEntry('css/app', './assets/scss/app.scss')
     .splitEntryChunks()

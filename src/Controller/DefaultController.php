@@ -27,12 +27,12 @@ class DefaultController
     }
 
     /**
-     * @Route("/default", name="default")
+     * @Route("/dashboard", name="dashboard")
      */
     public function index(): Response
     {
-        $metrics = $this->client->collection('getTeamCollection');
-        dd($metrics);
-        return new Response($this->twig->render('components/pages/dashboard.html.twig', ['metrics' => $metrics]));
+        $user = $this->client->getItem('getUserItem', ['slug' => '4a9e6526-b991-4c0e-bf5d-fbb570de915f']);
+
+        return new Response($this->twig->render('components/pages/dashboard/index.html.twig', ['user' => $user]));
     }
 }
