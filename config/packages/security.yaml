@@ -15,7 +15,11 @@ security:
         app_version:
             pattern: ^/state$
             security: false
-            
+        
+        default:
+            pattern: ^/default$
+            security: false
+
         login:
             pattern:  ^/login$
             security: false
