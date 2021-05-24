@@ -1,9 +1,10 @@
-@import "~bootstrap";
+@import "~bootstrap/scss/bootstrap";
 
 @import "~@fortawesome/fontawesome-free/scss/fontawesome";
 @import "~@fortawesome/fontawesome-free/scss/brands";
 @import "~@fortawesome/fontawesome-free/scss/regular";
 @import "~@fortawesome/fontawesome-free/scss/solid";
+
 * {
     font-family: Lato;
 }
@@ -13,22 +14,25 @@
     box-sizing: border-box;
 }
 
-
 /* VARIABLE */
 @import "variable";
+@import "mixin";
 
+#tpm {
+    min-height: 100vh;
+    min-width: 100%;
+    background: $bg-secondary;
+}
 
 /* TEMPLATE */
 @import "./components/templates/outsider.scss";
-@import "./components/templates/dashboard.scss";
-
+@import "./components/templates/dashboard-template.scss";
 
 /* ATOMS */
 @import "./components/atoms/footer";
 
-
 /* MOLECULES */
-// @import "./components/molecules/table";
+@import "./components/molecules/cards";
 
 
 /* ORGANISMS */
@@ -38,3 +42,6 @@
 
 /* PAGES */
 @import "components/pages/dashboard";
+@import "components/pages/login";
+@import "components/pages/register";
+

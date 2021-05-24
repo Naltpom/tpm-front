@@ -1,3 +1,48 @@
-#header {
-    
+#navbar-header {
+    grid-area: header;
+    width: auto;
+    position: relative;
+}
+.navbar {
+    &-fixed {
+        position: fixed;
+        left: 0;
+        @include media-breakpoint-up(sm) {left: 80px;}
+        @include media-breakpoint-up(lg) {left: 260px;}
+        right: 0;
+        height: 4.45rem;
+        & > div.navbar-container {
+            margin: .8rem 1.5rem 0,;
+            @include media-breakpoint-up(sm) {margin: 1rem 1.8rem 0;}
+            @include media-breakpoint-up(lg) {margin: 1.3rem 2rem 0;}
+            border-radius: 0.428rem;
+            box-shadow: 0 4px 24px 0 #22292f1a;
+            height: 62px;
+            display: flex;
+            flex-basis: 100%;
+            transition: 300ms ease all;
+            background: $bg-primary;
+            height: 100%;
+        }
+    }
+    &-items {
+        padding: 0.8rem 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        color: $color-secondary;
+        & a {
+            height: 1.6rem;
+            color: $color-secondary;
+            &:hover {
+                color: $color-hover;
+            }
+        }
+        & .icon {
+            height: 1.6rem;
+            width: 1.6rem;
+            font-size: 1.6rem;
+        }
+    }
 }

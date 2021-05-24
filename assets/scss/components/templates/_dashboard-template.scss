@@ -1,0 +1,20 @@
+#dashboard-template {
+    display: grid;
+    grid-template-areas: "header" "main" "footer";
+    grid-template-rows: 80px 100vh 2rem;
+    @include media-breakpoint-up(sm) {
+        grid-template-areas: "aside header" 
+                            "aside main" 
+                            "aside footer";
+        grid-template-columns: 80px 1fr;
+    }
+    @include media-breakpoint-up(lg) {
+        grid-template-columns: 260px 1fr;
+    }
+    #main {
+        grid-area: main;
+        margin: .8rem 1.5rem 0,;
+        @include media-breakpoint-up(sm) {margin: 1rem 1.8rem 0;}
+        @include media-breakpoint-up(lg) {margin: 1.3rem 2rem 0;}
+    }
+}

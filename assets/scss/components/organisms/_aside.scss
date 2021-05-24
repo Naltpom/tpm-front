@@ -1,3 +1,14 @@
 #aside {
-    
+    grid-area: aside;
+    background: $bg-primary;
+    height: 100vh;
+    display: none;
+    position: sticky;
+    top: 0;
+    @include media-breakpoint-up(sm) {
+        display: block;
+    }
+    // @include media-breakpoint-up(lg) {
+
+    // }
 }

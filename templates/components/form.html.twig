@@ -1,0 +1,23 @@
+{% extends "bootstrap_4_layout.html.twig" %}
+
+{# {%- block password_widget -%}
+    <input type="password" {{ block('widget_attributes') }} class="form-control">
+    {% if full_name != '_password' and full_name != 'password' %}
+        <meter max="4" class="password-strength-meter"></meter>
+    {% endif %}
+{%- endblock password_widget -%}
+
+{% block form_errors -%}
+    {%- if errors|length > 0 -%}
+        <span class="{% if form is not rootform %}invalid-feedback{% else %}alert alert-danger{% endif %} d-block">
+            {%- for error in errors -%}
+                <span class="d-block">
+                    <span class="form-error-icon badge badge-danger text-uppercase">{{ 'Error'|trans({}, 'validators') }}</span> <span class="form-error-message">{{ error.message|trans }}</span>
+                </span>
+            {%- endfor -%}
+        </span>
+    {%- endif %}
+{%- endblock form_errors %} #}
+
+
+

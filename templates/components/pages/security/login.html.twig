@@ -1,0 +1,18 @@
+{% extends 'components/templates/outsider.html.twig' %}
+
+{% block title %} | {{'title.login'|trans}}{% endblock %}
+
+{% block content %}
+
+    <div id="login">
+        <div class="card card-primary">
+            {{ form_start(form, {'attr': {'class': 'w-100 py-3'},'method': 'POST'}) }}  {#'action': path('security_login_check'), #} 
+                {{ form_widget(form) }}
+                <button class="">{{ 'btn.login'|trans }}</button>
+            {{ form_end(form) }}
+            
+            <p><a href="">Forgot your password?</a></p>
+        </div>
+    </div>
+
+{% endblock %}

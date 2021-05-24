@@ -1,0 +1,14 @@
+{% extends 'components/templates/outsider.html.twig' %}
+
+{% block title %} | {{'title.register'|trans}}{% endblock %}
+
+{% block content %}
+
+    <div id="register">
+        {{ form_start(form, {'attr': {'class': 'w-100 py-3'},'method': 'POST'}) }}  {#'action': path('security_login_check'), #} 
+            {{ form_widget(form) }}
+            <button class="">{{ 'btn.register'|trans }}</button>
+        {{ form_end(form) }}
+    </div>
+
+{% endblock %}

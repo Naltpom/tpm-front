@@ -25,6 +25,15 @@ class DefaultController
         $this->twig = $twig;
         $this->client = $client;
     }
+    /**
+     * @Route("/", name="index")
+     */
+    public function __invoke(): Response
+    {
+        $user = $this->client->getItem('getUserItem', ['slug' => '4a9e6526-b991-4c0e-bf5d-fbb570de915f']);
+
+        return new Response($this->twig->render('components/pages/dashboard/index.html.twig', ['user' => $user]));
+    }
 
     /**
      * @Route("/dashboard", name="dashboard")
